@@ -1,5 +1,7 @@
 <?php
 
+namespace RuLong\Area;
+
 use Illuminate\Database\Seeder;
 use Illuminate\Support\Facades\DB;
 
@@ -12,7 +14,7 @@ class RulongAreasTableSeeder extends Seeder
      */
     public function run()
     {
-        $SQL = file_get_contents(__DIR__ . '/database_seeder.stub');
+        $SQL = file_get_contents(__DIR__ . '/../database/seeds/database_seeder.stub');
         DB::statement($SQL);
     }
 }

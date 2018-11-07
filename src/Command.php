@@ -17,7 +17,7 @@ class Command extends LaravelCommand
         $this->call('migrate');
         // 迁移数据
         $this->call('db:seed', [
-            '--class' => 'RulongAreasTableSeeder',
+            '--class' => RulongAreasTableSeeder::class,
         ]);
         $this->info('Database migrate success');
     }
